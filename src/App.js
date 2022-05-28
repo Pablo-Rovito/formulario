@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Form from './Form'
+import Entidad1 from './user.interface'
+import Entidad2 from './perro.interface'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+   return (
+      <div className='main_container'>
+         <Form entidad={Entidad1} actionType='SAVE_USER' reducerType='user' />
+         <Form entidad={Entidad2} actionType='SAVE_PERRO' reducerType='perro' />
+      </div>
+   )
 }
 
-export default App;
+export default App
